@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+
+    <link rel="stylesheet" href="codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="imports.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer type="text/javascript" src="./codemirror/lib/codemirror.js"></script>
+    <script defer src="codemirror/mode/xml/xml.js"></script>
+    <script defer src="codemirror/mode/javascript/javascript.js"></script>
+    <script defer src="codemirror/mode/css/css.js"></script>
+    <script defer src="Editor.js"></script>
+</head>
+<body>
+    <div class="parent">
+        <div class="html-container">
+            <h1>HTML</h1>
+            <textarea id="html-editor"></textarea>
+        </div>
+        <div class="css-container">
+            <h1>CSS</h1>
+            <textarea id="css-editor"></textarea>
+        </div>
+        <div class="javascript-container">
+            <h1>JS</h1>
+            <textarea id="javascript-editor"></textarea>
+        </div>
+    </div>
+    <div class="output-container">
+        <button id="run"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+            <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+          </svg></span>  Run</button>
+        <iframe id="i-output" sandbox="allow-scripts"></iframe>
+    </div>
+</body>
+</html>
